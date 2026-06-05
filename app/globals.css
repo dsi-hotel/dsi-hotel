@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-navy: #1A3A6B;
+  --color-navy-dark: #0F1114;
+  --color-navy-mid: #162848;
+  --color-gold: #C9A96E;
+  --color-gold-light: #E2C898;
+  --color-gold-dim: #8B7043;
+  --color-cream: #F8F5EF;
+  --color-charcoal: #2C2C2C;
+
+  /* Fonts */
+  --font-cormorant: var(--font-cormorant-garamond), Georgia, serif;
+  --font-playfair: var(--font-playfair-display), Georgia, serif;
+  --font-dm: var(--font-dm-sans), system-ui, sans-serif;
+
+  /* Letter spacing */
+  --tracking-widest: 0.2em;
+  --tracking-wider: 0.15em;
+  --tracking-wide: 0.08em;
+
+  /* Keyframes */
+  --animate-ticker: ticker 35s linear infinite;
+  --animate-ticker-slow: ticker 50s linear infinite;
+  --animate-float: float 2s ease-in-out infinite;
+  --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.7; }
+  }
+}
+
+/* CSS custom properties for use outside Tailwind */
+:root {
+  --navy: #1A3A6B;
+  --navy-dark: #0F1114;
+  --navy-mid: #162848;
+  --gold: #C9A96E;
+  --gold-light: #E2C898;
+  --gold-dim: #8B7043;
+  --white: #F8F5EF;
+  --charcoal: #2C2C2C;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  cursor: none;
+  background-color: var(--white);
+  color: var(--charcoal);
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--charcoal); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* Selection */
+::selection { background: var(--navy); color: var(--gold); }
+::-moz-selection { background: var(--navy); color: var(--gold); }
+
+/* Focus visible */
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* Hex pattern */
+.hex-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath d='M40 0l20 11.547v23.094L40 46.188 20 34.641V11.547L40 0zm0 4.619L23.094 13.85v20.75L40 43.83l16.906-9.23V13.85L40 4.619z' stroke='%23C9A96E' stroke-opacity='0.06' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Diamond pattern */
+.diamond-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L55 30L30 55L5 30Z' stroke='%23C9A96E' stroke-opacity='0.04' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+}
+
+/* Input styles */
+.dsi-input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(26, 58, 107, 0.2);
+  border-radius: 2px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #2C2C2C;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.dsi-input::placeholder {
+  color: rgba(44, 44, 44, 0.4);
+}
+
+.dsi-input:focus {
+  border-color: #C9A96E;
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+
+.dsi-input.error { border-color: #e53e3e; }
+.dsi-input.valid { border-color: #C9A96E; }
+
+/* Select */
+.dsi-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238B7043' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+/* Nav underline */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #C9A96E;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after { transform: scaleX(1); }
+
+/* Section label trait */
+.section-label-trait {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-label-trait::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: #C9A96E;
+  flex-shrink: 0;
+}

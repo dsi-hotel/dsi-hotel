@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where node *)",
+      "Bash(where npm *)",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command npm -ErrorAction SilentlyContinue)",
+      "PowerShell($paths = @\\(\"$env:ProgramFiles\\\\nodejs\\\\npm.cmd\", \"$env:ProgramFiles\\\\nodejs\\\\node.exe\", \"${env:ProgramFiles\\(x86\\)}\\\\nodejs\\\\npm.cmd\", \"$env:APPDATA\\\\npm\\\\npm.cmd\", \"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\npm.cmd\", \"$env:LOCALAPPDATA\\\\fnm_multishells\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } else { Write-Output \"MISSING: $p\" } })",
+      "PowerShell($paths = @\\(\"$env:ProgramFiles\\\\nodejs\\\\node.exe\", \"${env:ProgramFiles\\(x86\\)}\\\\nodejs\\\\node.exe\", \"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\node.exe\", \"$env:LOCALAPPDATA\\\\fnm\\\\node.exe\", \"$env:USERPROFILE\\\\scoop\\\\apps\\\\nodejs\\\\current\\\\node.exe\", \"$env:ChocolateyInstall\\\\bin\\\\node.exe\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } }; Write-Output \"---PATH---\"; $env:PATH -split ';' | Where-Object { $_ -match 'node' })",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Gabriel\\\\Documents\\\\CLAUDE\" -Force)",
+      "Bash(Select-Object Name)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" install resend)",
+      "PowerShell(cd C:\\\\Claude && npm run dev 2>&1 &)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(git -C C:/Claude status)",
+      "Bash(git -C C:/Claude remote -v)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "PowerShell(gh auth status 2>&1)",
+      "PowerShell(gh repo list --limit 5 2>&1)"
+    ]
+  }
+}
