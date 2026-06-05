@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 function buildEmailHtml(data: Record<string, unknown>): string {
   const needs = Array.isArray(data.needs) && data.needs.length > 0
     ? (data.needs as string[]).join(', ')
@@ -69,6 +67,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: true, simulated: true })
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY)
     const { error } = await resend.emails.send({
       from: 'DSI Hotel <onboarding@resend.dev>',
       to: [process.env.CONTACT_EMAIL ?? 'support@dsihotel.com'],
