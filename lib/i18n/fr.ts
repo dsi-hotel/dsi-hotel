@@ -133,6 +133,29 @@ export const fr = {
     ],
   },
 
+  projects: {
+    label: 'Projets en cours',
+    h2a: 'Références',
+    h2b: 'européennes',
+    desc: "Des projets d'envergure qui témoignent de notre expertise sur le terrain, en France et en Suisse.",
+    confidential: 'Projet présenté avec accord du client · Autres références disponibles sous NDA',
+    card: {
+      country: 'Genève, Suisse',
+      hotel: 'Hôtel Métropole Genève',
+      stars: 'Palace · 5 étoiles Superior · Rive gauche, lac Léman',
+      tags: ['Ouverture IT', 'Infrastructure complète', 'PMS Oracle OPERA', 'Wi-Fi 7', 'Cybersécurité'],
+      kpis: [
+        { label: 'Type de mission', value: 'Ouverture IT complète' },
+        { label: 'Chambres & suites', value: '111 chambres · 16 suites' },
+        { label: 'Livraison', value: 'Ouverture J0 sans interruption' },
+        { label: 'Conformité', value: 'RGPD CH · PCI-DSS' },
+      ],
+      pullQuote: 'Un monument de 170 ans. Une ouverture IT sans accroc.',
+      body: "Quand l'Hôtel Métropole Genève — Palace fondé en 1854, seul 5 étoiles Superior sur la rive gauche du lac Léman — a lancé son projet de rénovation IT, les exigences étaient à la hauteur de son histoire.\n\nDSI Hotel a pris en charge l'ensemble de l'infrastructure : du câblage structuré aux VLANs sécurisés, du déploiement Wi-Fi 7 chambre par chambre jusqu'à l'intégration des systèmes PMS, en passant par la vidéosurveillance IP et la conformité PCI-DSS.",
+      outcome: "Résultat : une ouverture sans interruption, des équipes opérationnelles dès le premier jour.",
+    },
+  },
+
   clients: {
     label: 'Ils nous font confiance',
     h2a: 'Nos clients',

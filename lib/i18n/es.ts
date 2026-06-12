@@ -135,6 +135,29 @@ export const es: typeof fr = {
     ],
   },
 
+  projects: {
+    label: 'Proyectos en curso',
+    h2a: 'Referencias',
+    h2b: 'europeas',
+    desc: 'Proyectos de gran envergadura que demuestran nuestra experiencia sobre el terreno, en Francia y Suiza.',
+    confidential: 'Proyecto presentado con consentimiento del cliente · Otras referencias disponibles bajo NDA',
+    card: {
+      country: 'Ginebra, Suiza',
+      hotel: 'Hôtel Métropole Genève',
+      stars: 'Palace · 5 estrellas Superior · Orilla izquierda, lago Lemán',
+      tags: ['Apertura IT', 'Infraestructura completa', 'Oracle OPERA PMS', 'Wi-Fi 7', 'Ciberseguridad'],
+      kpis: [
+        { label: 'Tipo de misión', value: 'Apertura IT completa' },
+        { label: 'Habitaciones y suites', value: '111 habitaciones · 16 suites' },
+        { label: 'Entrega', value: 'Apertura día 0 sin interrupciones' },
+        { label: 'Conformidad', value: 'RGPD CH · PCI-DSS' },
+      ],
+      pullQuote: 'Un monumento de 170 años. Una apertura IT sin contratiempos.',
+      body: "Cuando el Hôtel Métropole Genève — Palace fundado en 1854, único 5 estrellas Superior en la orilla izquierda del lago Lemán — lanzó su proyecto de renovación IT, las exigencias estaban a la altura de su historia.\n\nDSI Hotel se encargó de toda la infraestructura: desde el cableado estructurado hasta las VLANs seguras, el despliegue Wi-Fi 7 habitación por habitación, la integración del PMS, la videovigilancia IP y la conformidad PCI-DSS.",
+      outcome: "Resultado: una apertura sin interrupciones, con equipos operativos desde el primer día.",
+    },
+  },
+
   clients: {
     label: 'Confían en nosotros',
     h2a: 'Nuestros clientes',
