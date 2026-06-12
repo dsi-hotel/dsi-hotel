@@ -6,6 +6,7 @@ import TechLogos from '@/components/sections/TechLogos'
 import WhyUs from '@/components/sections/WhyUs'
 import Expertise from '@/components/sections/Expertise'
 import ClientsSection from '@/components/sections/ClientsSection'
+import ProjectsSection from '@/components/sections/ProjectsSection'
 import Testimonial from '@/components/sections/Testimonial'
 import CTASection from '@/components/sections/CTASection'
 
@@ -20,6 +21,7 @@ export default function HomePage() {
       <WhyUs />
       <Expertise />
       <ClientsSection />
+      <ProjectsSection />
       <Testimonial />
       <CTASection />
     </>
