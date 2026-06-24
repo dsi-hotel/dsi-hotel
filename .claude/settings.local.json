@@ -20,7 +20,8 @@
       "Bash(gh repo *)",
       "PowerShell(gh auth status 2>&1)",
       "PowerShell(gh repo list --limit 5 2>&1)",
-      "mcp__Vercel__deploy_to_vercel"
+      "mcp__Vercel__deploy_to_vercel",
+      "mcp__81c973b5-2a60-474a-a640-5a84a654e6da__list_deployments"
     ]
   }
 }
