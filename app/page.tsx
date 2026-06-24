@@ -7,6 +7,7 @@ import WhyUs from '@/components/sections/WhyUs'
 import Expertise from '@/components/sections/Expertise'
 import ClientsSection from '@/components/sections/ClientsSection'
 import ProjectsSection from '@/components/sections/ProjectsSection'
+import MissionsSection from '@/components/sections/MissionsSection'
 import Testimonial from '@/components/sections/Testimonial'
 import CTASection from '@/components/sections/CTASection'
 
@@ -22,6 +23,7 @@ export default function HomePage() {
       <Expertise />
       <ClientsSection />
       <ProjectsSection />
+      <MissionsSection />
       <Testimonial />
       <CTASection />
     </>
