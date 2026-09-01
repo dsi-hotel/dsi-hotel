@@ -70,6 +70,67 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://dsihotel.fr/#organization',
+  name: 'DSI Hotel',
+  alternateName: 'DSI Hotel — MSP IT Hôtellerie',
+  description: 'Infogérance IT spécialisée hôtellerie en Europe. Infrastructure, cybersécurité, Wi-Fi, PCI-DSS. Astreinte 24/7, SLA garanti.',
+  url: 'https://dsihotel.fr',
+  telephone: '+33184180223',
+  email: 'contact@dsihotel.fr',
+  logo: 'https://dsihotel.fr/dsi-logo-gold.png',
+  image: 'https://dsihotel.fr/dsi-logo-gold.png',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Paris',
+    addressRegion: 'Île-de-France',
+    postalCode: '75008',
+    addressCountry: 'FR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 48.8745,
+    longitude: 2.3021,
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'France' },
+    { '@type': 'Country', name: 'Switzerland' },
+    { '@type': 'Country', name: 'Portugal' },
+    { '@type': 'AdministrativeArea', name: 'Europe' },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '19:00',
+    },
+  ],
+  knowsAbout: [
+    'Infogérance hôtelière',
+    'Cybersécurité hôtellerie',
+    'Infrastructure IT hôtel',
+    'PCI-DSS',
+    'Wi-Fi hôtel',
+    'Oracle OPERA PMS',
+    'Helpdesk IT',
+    'MSP hôtellerie luxe',
+  ],
+  sameAs: [],
+  priceRange: '€€€',
+  serviceArea: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: 48.8566,
+      longitude: 2.3522,
+    },
+    geoRadius: '2000000',
+  },
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -80,6 +141,12 @@ export default function RootLayout({
       lang="fr"
       className={`${cormorantGaramond.variable} ${playfairDisplay.variable} ${dmSans.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-cream">
         <LanguageProvider>
           <CustomCursor />
