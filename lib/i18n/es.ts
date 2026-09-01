@@ -10,6 +10,42 @@ export const es: typeof fr = {
     testimonials: 'Testimonios',
     contact: 'Contacto',
     audit: 'Auditoría gratis',
+    portail: 'Portal cliente',
+  },
+
+  portail: {
+    breadcrumb: 'Inicio',
+    label: 'Portal cliente DSI Hotel',
+    titleA: 'Su infraestructura,',
+    titleB: 'con total transparencia.',
+    subtitle: 'Cada cliente de DSI Hotel dispone de un espacio dedicado para seguir en tiempo real la actividad IT de su establecimiento — tickets, proyectos, procedimientos y documentación técnica.',
+    badge1: 'Acceso seguro — credenciales proporcionadas al firmar el contrato',
+    badge2: 'Datos en tiempo real — sin demora, sin filtros',
+    badge3: 'Usted gestiona su lado, igual que nosotros gestionamos el nuestro',
+    featuresTitle: 'Todo lo que necesita, en un solo lugar',
+    featuresDesc: 'Un espacio diseñado para una colaboración total entre sus equipos y los nuestros.',
+    features: {
+      tickets: {
+        title: 'Gestión de tickets',
+        desc: 'Siga en tiempo real cada solicitud de asistencia: apertura, asignación, resolución. Su equipo ve exactamente lo que vemos nosotros — sin filtros.',
+      },
+      procedures: {
+        title: 'Procedimientos & Documentación',
+        desc: 'Acceda a procedimientos adaptados a su cadena hotelera: sistemas a instalar, configuraciones estándar, guías de inicio. Siempre actualizados e indexados.',
+      },
+      projects: {
+        title: 'Seguimiento de proyectos',
+        desc: 'Migración de servidores, renovación de parque, despliegue Wi-Fi… Consulte el avance de cada proyecto en curso, los pasos validados y las próximas acciones.',
+      },
+      photos: {
+        title: 'Galería de infraestructura',
+        desc: 'Fotos tomadas por nuestros técnicos en cada intervención: bastidores, equipos, cableado. Un registro visual completo de su infraestructura.',
+      },
+    },
+    ctaEyebrow: 'Acceso bajo petición',
+    ctaTitle: '¿Listo para acceder a su espacio cliente?',
+    ctaDesc: 'Las credenciales de acceso se facilitan en el momento de la firma del contrato. Para cualquier consulta, contacte con su interlocutor DSI Hotel.',
+    ctaBtn: 'Contáctenos',
   },
 
   hero: {

@@ -10,6 +10,42 @@ export const en: typeof fr = {
     testimonials: 'Testimonials',
     contact: 'Contact',
     audit: 'Free Audit',
+    portail: 'Client Portal',
+  },
+
+  portail: {
+    breadcrumb: 'Home',
+    label: 'DSI Hotel Client Portal',
+    titleA: 'Your infrastructure,',
+    titleB: 'fully transparent.',
+    subtitle: 'Every DSI Hotel client has a dedicated space to monitor their establishment\'s IT activity in real time — tickets, projects, procedures and technical documentation.',
+    badge1: 'Secure access — credentials provided at contract signing',
+    badge2: 'Real-time data — no delay, no filter',
+    badge3: 'You manage your side, just as we manage ours',
+    featuresTitle: 'Everything you need, in one place',
+    featuresDesc: 'A space designed for total collaboration between your teams and ours.',
+    features: {
+      tickets: {
+        title: 'Ticket Management',
+        desc: 'Track every support request in real time: opening, assignment, resolution. Your team sees exactly what we see — unfiltered.',
+      },
+      procedures: {
+        title: 'Procedures & Documentation',
+        desc: 'Access procedures tailored to your hotel chain: systems to install, standard configurations, quick-start guides. Always up to date and fully indexed.',
+      },
+      projects: {
+        title: 'Project Tracking',
+        desc: 'Server migration, fleet renewal, Wi-Fi deployment… Monitor the progress of every ongoing project, validated steps and next actions.',
+      },
+      photos: {
+        title: 'Infrastructure Gallery',
+        desc: 'Photos taken by our technicians at every intervention: racks, equipment, cabling. A complete visual record of your infrastructure.',
+      },
+    },
+    ctaEyebrow: 'Access on request',
+    ctaTitle: 'Ready to access your client portal?',
+    ctaDesc: 'Login credentials are provided at contract signing. For any questions, contact your DSI Hotel account manager.',
+    ctaBtn: 'Contact us',
   },
 
   hero: {

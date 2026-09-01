@@ -54,6 +54,7 @@ export default function Navbar() {
     { label: t.nav.whyUs, href: '/#why-us' },
     { label: t.nav.sectors, href: '/#expertise' },
     { label: t.nav.clients, href: '/#clients' },
+    { label: t.nav.portail, href: '/portail' },
     { label: t.nav.contact, href: '/contact' },
   ]
 

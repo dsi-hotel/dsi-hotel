@@ -8,6 +8,42 @@ export const fr = {
     testimonials: 'Témoignages',
     contact: 'Contact',
     audit: 'Audit gratuit',
+    portail: 'Espace client',
+  },
+
+  portail: {
+    breadcrumb: 'Accueil',
+    label: 'Portail client DSI Hotel',
+    titleA: 'Votre infrastructure,',
+    titleB: 'en toute transparence.',
+    subtitle: "Chaque client DSI Hotel dispose d'un espace dédié pour suivre en temps réel l'activité IT de son établissement — tickets, projets, procédures et documentation technique.",
+    badge1: 'Accès sécurisé, credentials fournis à l\'ouverture du contrat',
+    badge2: 'Données en temps réel — aucun délai, aucun filtre',
+    badge3: 'Vous gérez votre côté, comme nous gérons le nôtre',
+    featuresTitle: 'Tout ce dont vous avez besoin, au même endroit',
+    featuresDesc: 'Un espace conçu pour une collaboration totale entre vos équipes et les nôtres.',
+    features: {
+      tickets: {
+        title: 'Gestion des tickets',
+        desc: "Suivez en temps réel chaque demande d'assistance : ouverture, prise en charge, résolution. Votre équipe voit exactement ce que nous voyons — sans filtre.",
+      },
+      procedures: {
+        title: 'Procédures & Documentation',
+        desc: "Retrouvez les procédures adaptées à votre chaîne hôtelière : systèmes à installer, configurations standards, guides de démarrage. Tout est à jour et indexé.",
+      },
+      projects: {
+        title: 'Suivi de projets',
+        desc: "Migration serveur, renouvellement de parc, déploiement Wi-Fi… Consultez l'avancement de chaque projet en cours, les étapes validées et les prochaines actions.",
+      },
+      photos: {
+        title: 'Galerie infrastructure',
+        desc: "Photos prises par nos techniciens lors de chaque intervention : baies, équipements, câblage. Une traçabilité visuelle complète de votre infrastructure.",
+      },
+    },
+    ctaEyebrow: 'Accès sur demande',
+    ctaTitle: 'Prêt à rejoindre votre espace client ?',
+    ctaDesc: "Les identifiants de connexion sont transmis lors de la signature du contrat. Pour toute question, contactez votre interlocuteur DSI Hotel.",
+    ctaBtn: 'Nous contacter',
   },
 
   hero: {
