@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     'DSI Hotel',
     'PCI-DSS hôtellerie',
   ],
+  metadataBase: new URL('https://www.dsihotel.com'),
+  alternates: {
+    canonical: 'https://www.dsihotel.com',
+  },
   authors: [{ name: 'DSI Hotel' }],
   robots: { index: true, follow: true },
   icons: {
@@ -49,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://dsihotel.fr',
+    url: 'https://dsihotel.com',
     siteName: 'DSI Hotel',
     title: 'DSI Hotel — MSP IT Hôtellerie Europe',
     description:
@@ -73,15 +77,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://dsihotel.fr/#organization',
+  '@id': 'https://dsihotel.com/#organization',
   name: 'DSI Hotel',
   alternateName: 'DSI Hotel — MSP IT Hôtellerie',
   description: 'Infogérance IT spécialisée hôtellerie en Europe. Infrastructure, cybersécurité, Wi-Fi, PCI-DSS. Astreinte 24/7, SLA garanti.',
-  url: 'https://dsihotel.fr',
+  url: 'https://dsihotel.com',
   telephone: '+33184180223',
-  email: 'contact@dsihotel.fr',
-  logo: 'https://dsihotel.fr/dsi-logo-gold.png',
-  image: 'https://dsihotel.fr/dsi-logo-gold.png',
+  email: 'contact@dsihotel.com',
+  logo: 'https://dsihotel.com/dsi-logo-gold.png',
+  image: 'https://dsihotel.com/dsi-logo-gold.png',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Paris',
