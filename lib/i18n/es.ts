@@ -222,7 +222,7 @@ export const es: typeof fr = {
   footer: {
     tagline: 'Socio IT de hoteles de lujo en Europa, esencial por compromiso.',
     solutionsLabel: 'Soluciones',
-    solutions: ['Infraestructura', 'Ciberseguridad', 'Red Wi-Fi', 'Conformidad', 'Soporte gestionado'],
+    solutions: ['Mantenimiento informático', 'Infraestructura', 'Ciberseguridad', 'Red Wi-Fi', 'Conformidad', 'Soporte gestionado'],
     aproposLabel: 'Acerca de',
     apropos: ['Nuestro enfoque', 'Equipo', 'Carreras', 'Socios'],
     contactLabel: 'Contacto',

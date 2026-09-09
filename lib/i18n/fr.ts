@@ -221,7 +221,7 @@ export const fr = {
   footer: {
     tagline: "Partenaire IT des hôtels de luxe en Europe, essentiel par engagement.",
     solutionsLabel: 'Solutions',
-    solutions: ['Infrastructure', 'Cybersécurité', 'Réseau Wi-Fi', 'Conformité', 'Support managé'],
+    solutions: ['Maintenance informatique', 'Infrastructure', 'Cybersécurité', 'Réseau Wi-Fi', 'Conformité', 'Support managé'],
     aproposLabel: 'À propos',
     apropos: ['Notre approche', 'Équipe', 'Carrières', 'Partenaires'],
     contactLabel: 'Contact',

@@ -222,7 +222,7 @@ export const en: typeof fr = {
   footer: {
     tagline: 'IT partner for luxury hotels across Europe, essential by commitment.',
     solutionsLabel: 'Solutions',
-    solutions: ['Infrastructure', 'Cybersecurity', 'Wi-Fi Network', 'Compliance', 'Managed support'],
+    solutions: ['IT Maintenance', 'Infrastructure', 'Cybersecurity', 'Wi-Fi Network', 'Compliance', 'Managed support'],
     aproposLabel: 'About',
     apropos: ['Our approach', 'Team', 'Careers', 'Partners'],
     contactLabel: 'Contact',

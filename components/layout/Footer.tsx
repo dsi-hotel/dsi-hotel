@@ -32,6 +32,15 @@ function LinkedinIcon({ size = 16 }: { size?: number }) {
   )
 }
 
+const solutionsHrefs = [
+  '/services/maintenance-informatique-hotel',
+  '/#services',
+  '/services/cybersecurite-hotel',
+  '/services/wifi-hotel',
+  '/services/pci-dss-hotel',
+  '/#services',
+]
+
 export default function Footer() {
   const { t } = useLanguage()
 
@@ -78,9 +87,9 @@ export default function Footer() {
           <div>
             <h3 className="font-dm text-[11px] font-medium uppercase tracking-[0.15em] text-gold mb-5">{t.footer.solutionsLabel}</h3>
             <ul className="space-y-3">
-              {t.footer.solutions.map((item) => (
+              {t.footer.solutions.map((item, idx) => (
                 <li key={item}>
-                  <Link href="/#services" className="font-dm text-[13px] text-cream/50 hover:text-cream/80 transition-colors duration-200">
+                  <Link href={solutionsHrefs[idx] ?? '/#services'} className="font-dm text-[13px] text-cream/50 hover:text-cream/80 transition-colors duration-200">
                     {item}
                   </Link>
                 </li>
