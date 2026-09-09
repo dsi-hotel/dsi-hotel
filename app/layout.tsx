@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://dsihotel.com',
+    url: 'https://www.dsihotel.com',
     siteName: 'DSI Hotel',
     title: 'DSI Hotel — MSP IT Hôtellerie Europe',
     description:
@@ -74,22 +74,27 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
+// 1) Identité de l'entreprise (ProfessionalService = LocalBusiness + services pro)
+const organizationJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://dsihotel.com/#organization',
+  '@type': 'ProfessionalService',
+  '@id': 'https://www.dsihotel.com/#organization',
   name: 'DSI Hotel',
-  alternateName: 'DSI Hotel — MSP IT Hôtellerie',
-  description: 'Infogérance IT spécialisée hôtellerie en Europe. Infrastructure, cybersécurité, Wi-Fi, PCI-DSS. Astreinte 24/7, SLA garanti.',
-  url: 'https://dsihotel.com',
+  alternateName: 'DSI Hôtel',
+  description:
+    "Prestataire IT (MSP) spécialisé dans l'hôtellerie 4 et 5 étoiles en Europe : infogérance, cybersécurité, réseau Wi-Fi, conformité PCI-DSS, helpdesk 24/7.",
+  url: 'https://www.dsihotel.com',
+  logo: 'https://www.dsihotel.com/dsi-logo-gold.png',
+  image: 'https://www.dsihotel.com/dsi-logo-gold.png',
   telephone: '+33184180223',
   email: 'contact@dsihotel.com',
-  logo: 'https://dsihotel.com/dsi-logo-gold.png',
-  image: 'https://dsihotel.com/dsi-logo-gold.png',
+  priceRange: '€€€',
+  vatID: 'FR71519557854',
+  taxID: '519557854',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '60 Rue François 1er',
     addressLocality: 'Paris',
-    addressRegion: 'Île-de-France',
     postalCode: '75008',
     addressCountry: 'FR',
   },
@@ -100,39 +105,103 @@ const jsonLd = {
   },
   areaServed: [
     { '@type': 'Country', name: 'France' },
-    { '@type': 'Country', name: 'Switzerland' },
+    { '@type': 'Country', name: 'Suisse' },
     { '@type': 'Country', name: 'Portugal' },
-    { '@type': 'AdministrativeArea', name: 'Europe' },
-  ],
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '08:00',
-      closes: '19:00',
-    },
+    { '@type': 'Place', name: 'Europe' },
   ],
   knowsAbout: [
-    'Infogérance hôtelière',
-    'Cybersécurité hôtellerie',
-    'Infrastructure IT hôtel',
-    'PCI-DSS',
-    'Wi-Fi hôtel',
+    'Infogérance hôtellerie',
+    'Cybersécurité hôtelière',
+    'Conformité PCI-DSS',
+    'Réseau Wi-Fi hôtelier',
     'Oracle OPERA PMS',
-    'Helpdesk IT',
-    'MSP hôtellerie luxe',
+    'RGPD',
+    'DORA',
   ],
-  sameAs: [],
-  priceRange: '€€€',
-  serviceArea: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: 48.8566,
-      longitude: 2.3522,
-    },
-    geoRadius: '2000000',
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:00',
+    closes: '19:00',
   },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+33184180223',
+    contactType: 'customer support',
+    availableLanguage: ['French', 'English'],
+    areaServed: 'EU',
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Pascal Sanglier',
+    sameAs: 'https://www.linkedin.com/in/pascal-sanglier-2b8016b2/',
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/dsihotel1234/',
+    'https://www.crunchbase.com/organization/dsi-hotel',
+  ],
+}
+
+// 2) Catalogue de services
+const servicesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: "Infogérance IT pour l'hôtellerie de luxe",
+  provider: { '@id': 'https://www.dsihotel.com/#organization' },
+  areaServed: { '@type': 'Place', name: 'Europe' },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Services IT hôtellerie',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gestion de parc informatique', description: 'Inventaire, déploiement, supervision via Intune, NinjaOne, MDM.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Réseau Wi-Fi & LAN', description: 'Ubiquiti UniFi Wi-Fi 7, SSID ségrégués guest/staff/IoT, VLAN.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cybersécurité', description: 'pfSense, EDR Sophos, Entra ID + MFA, SIEM Azure Sentinel.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Helpdesk IT 24/7', description: 'Support ticket/téléphone/on-site, SLA 4h, astreinte 7j/7.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sauvegarde & continuité', description: 'Backup Veeam, réplication hors-site chiffrée, PRA, RTO garanti.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vidéosurveillance IP', description: 'Caméras IP HD, NVR redondant, rétention chiffrée, conformité RGPD.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Conformité PCI-DSS', description: 'Mise en conformité, audit, remédiation pour hôtels.' } },
+    ],
+  },
+}
+
+// 3) FAQ
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: "Qu'est-ce que DSI Hotel ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "DSI Hotel est un prestataire informatique (MSP) spécialisé exclusivement dans l'hôtellerie 4 et 5 étoiles en Europe. La société gère l'infrastructure IT complète : réseau, Wi-Fi, cybersécurité, PMS, vidéosurveillance et conformité PCI-DSS, avec un support 24/7.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Quel est le délai d'intervention de DSI Hotel ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "DSI Hotel garantit une intervention en moins d'une heure sur Paris pour les incidents critiques, avec une astreinte disponible 24h/24 et 7j/7, dans le cadre du contrat SLA signé.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'DSI Hotel intervient-il en dehors de Paris ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Oui. Au-delà de Paris et de l'Île-de-France, DSI Hotel réalise des projets en Europe, notamment en Suisse (Hôtel Métropole Genève) et au Portugal (InterContinental Estoril).",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quelles technologies DSI Hotel maîtrise-t-il ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'DSI Hotel maîtrise notamment Oracle OPERA (PMS), Fortinet, Sophos, Microsoft 365 (Entra ID, Intune, Defender), Ubiquiti UniFi Wi-Fi 7, Veeam, NinjaOne et la conformité PCI-DSS, RGPD et DORA.',
+      },
+    },
+  ],
 }
 
 export default function RootLayout({
@@ -148,7 +217,15 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className="min-h-screen flex flex-col bg-cream">
