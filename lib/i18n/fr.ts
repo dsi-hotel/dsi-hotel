@@ -62,6 +62,7 @@ export const fr = {
   },
 
   ticker: [
+    'Maintenance informatique hôtel',
     'Gestion de parc IT',
     'Cybersécurité & Hardening',
     'Réseau Wi-Fi & VLAN',

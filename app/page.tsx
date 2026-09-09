@@ -9,6 +9,7 @@ import Expertise from '@/components/sections/Expertise'
 import ClientsSection from '@/components/sections/ClientsSection'
 import ProjectsSection from '@/components/sections/ProjectsSection'
 import Testimonial from '@/components/sections/Testimonial'
+import FaqSection from '@/components/sections/FaqSection'
 import CTASection from '@/components/sections/CTASection'
 
 export const metadata: Metadata = {
@@ -62,6 +63,7 @@ export default function HomePage() {
       <ClientsSection />
       <ProjectsSection />
       <Testimonial />
+      <FaqSection />
       <CTASection />
     </>
   )

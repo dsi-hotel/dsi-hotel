@@ -5,6 +5,7 @@ import { LanguageProvider } from '@/lib/i18n'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CustomCursor from '@/components/layout/CustomCursor'
+import { faqItems } from '@/lib/data/faq'
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
@@ -34,6 +35,9 @@ export const metadata: Metadata = {
     'Infogérance IT spécialisée hôtellerie en Europe. Infrastructure, cybersécurité, Wi-Fi, PCI-DSS. Astreinte 24/7, SLA garanti.',
   keywords: [
     'infogérance hôtel',
+    'maintenance informatique hôtel',
+    'maintenance informatique hôtellerie',
+    'prestataire informatique hôtel',
     'MSP IT Paris',
     'cybersécurité hôtellerie',
     'support informatique hôtel luxe',
@@ -164,44 +168,19 @@ const servicesJsonLd = {
   },
 }
 
-// 3) FAQ
+// 3) FAQ — questions/réponses tenues à jour dans lib/data/faq.ts et rendues
+// visiblement par <FaqSection> sur la home (le JSON-LD doit refléter du contenu visible)
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: "Qu'est-ce que DSI Hotel ?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "DSI Hotel est un prestataire informatique (MSP) spécialisé exclusivement dans l'hôtellerie 4 et 5 étoiles en Europe. La société gère l'infrastructure IT complète : réseau, Wi-Fi, cybersécurité, PMS, vidéosurveillance et conformité PCI-DSS, avec un support 24/7.",
-      },
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': 'Question',
-      name: "Quel est le délai d'intervention de DSI Hotel ?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "DSI Hotel garantit une intervention en moins d'une heure sur Paris pour les incidents critiques, avec une astreinte disponible 24h/24 et 7j/7, dans le cadre du contrat SLA signé.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'DSI Hotel intervient-il en dehors de Paris ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Oui. Au-delà de Paris et de l'Île-de-France, DSI Hotel réalise des projets en Europe, notamment en Suisse (Hôtel Métropole Genève) et au Portugal (InterContinental Estoril).",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Quelles technologies DSI Hotel maîtrise-t-il ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'DSI Hotel maîtrise notamment Oracle OPERA (PMS), Fortinet, Sophos, Microsoft 365 (Entra ID, Intune, Defender), Ubiquiti UniFi Wi-Fi 7, Veeam, NinjaOne et la conformité PCI-DSS, RGPD et DORA.',
-      },
-    },
-  ],
+  })),
 }
 
 export default function RootLayout({
