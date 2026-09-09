@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Transition IT InterContinental Estoril — Étude de cas | DSI Hotel',
+  title: 'Transition IT InterContinental Estoril | DSI Hotel',
   description:
     "Comment DSI Hotel accompagne la transition en franchise IHG de l'InterContinental Estoril : PMS, réseau, connectivité, IHG Tech Standards.",
   alternates: {

@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://dsihotel.com',
+    url: 'https://www.dsihotel.com',
     siteName: 'DSI Hotel',
     title: 'DSI Hotel — MSP IT Hôtellerie Europe',
     description:
@@ -130,6 +130,11 @@ const organizationJsonLd = {
     contactType: 'customer support',
     availableLanguage: ['French', 'English'],
     areaServed: 'EU',
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Pascal Sanglier',
+    sameAs: 'https://www.linkedin.com/in/pascal-sanglier-2b8016b2/',
   },
   sameAs: [
     'https://www.linkedin.com/company/dsihotel1234/',

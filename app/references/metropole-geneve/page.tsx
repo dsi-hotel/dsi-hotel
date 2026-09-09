@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Ouverture IT Hôtel Métropole Genève — Étude de cas | DSI Hotel',
+  title: 'Ouverture IT Hôtel Métropole Genève | DSI Hotel',
   description:
     "Comment DSI Hotel a réalisé l'ouverture IT complète de l'Hôtel Métropole Genève (Palace 5★ Superior) : Wi-Fi 7, VLAN, Oracle OPERA, PCI-DSS, sans interruption.",
   alternates: {
