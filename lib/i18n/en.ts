@@ -198,7 +198,7 @@ export const en: typeof fr = {
       subtitle: "Marriott · Tribute Portfolio · Gare du Nord",
       tags: ["IT Opening", "Marriott", "Network & Wi-Fi", "Cybersecurity", "Day-1 Support"],
       kpis: [
-        { label: "Mission type", value: "IT opening (excluding cabling)" },
+        { label: "Mission type", value: "IT opening" },
         { label: "Rooms", value: "48 rooms" },
         { label: "Delivery", value: "Operational from day one" },
         { label: "Standard", value: "Marriott Tech Standards" },
@@ -206,7 +206,7 @@ export const en: typeof fr = {
       pullQuote: "A base camp for travellers at Gare du Nord. A turnkey IT opening.",
       body: [
         "A new 48-room lifestyle hotel in Marriott's Tribute Portfolio collection, Clubtrotteur Paris entrusted DSI Hotel with its entire pre-opening IT project.",
-        "Apart from cabling, DSI Hotel handled everything: network and VLANs, guest and staff Wi-Fi, Marriott systems integration, security, end-user equipment, and team support right through opening day.",
+        "DSI Hotel handled everything: network and VLANs, guest and staff Wi-Fi, Marriott systems integration, security, end-user equipment, and team support right through opening day.",
       ],
       outcome: "Outcome: a successful opening, infrastructure compliant with Marriott standards, and teams fully operational from day one.",
     },

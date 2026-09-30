@@ -29,7 +29,7 @@ const faits = [
   { label: 'Client', value: 'Clubtrotteur Paris, a Tribute Portfolio Hotel — Marriott International' },
   { label: 'Lieu', value: 'Quartier Gare du Nord, Paris 10e' },
   { label: 'Capacité', value: '48 chambres, coffee shop & bar, salle de fitness' },
-  { label: 'Mission', value: "Ouverture IT — ensemble du projet informatique (hors câblage)" },
+  { label: 'Mission', value: "Ouverture IT — ensemble du projet informatique" },
   { label: 'Livraison', value: 'Équipes opérationnelles dès le jour d\u2019ouverture' },
   { label: 'Standard', value: 'Standards technologiques Marriott' },
 ]
@@ -97,7 +97,7 @@ export default function ClubtrotteurParis() {
             </h2>
             <div className="h-px bg-gold/20 mb-5" />
             <p className="font-dm text-[14px] text-charcoal/70 leading-[1.85]">
-              DSI Hotel a pris en charge l&apos;intégralité du volet IT, hors câblage : conception et configuration du
+              DSI Hotel a pris en charge l&apos;intégralité du volet IT : conception et configuration du
               réseau et des VLAN, déploiement du Wi-Fi clients et collaborateurs, intégration des systèmes et
               applications Marriott, sécurité (pare-feu, conformité PCI-DSS), installation du parc utilisateurs, puis
               accompagnement des équipes et support au jour de l&apos;ouverture.
