@@ -251,6 +251,103 @@ export default function ProjectsSection() {
           </div>
         </motion.div>
 
+        {/* Separator */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={inView ? { scaleX: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="my-16"
+        >
+          <div className="h-px bg-gold/15" />
+        </motion.div>
+
+        {/* Project card — Clubtrotteur Paris */}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.7 }}
+          className="grid md:grid-cols-[1fr_2fr] gap-10 md:gap-16 items-start"
+        >
+          {/* Left — identity */}
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🇫🇷</span>
+              <span className="font-dm text-[12px] font-medium tracking-[0.15em] uppercase text-gold/80">
+                Paris, France
+              </span>
+            </div>
+
+            <div>
+              <p className="font-cormorant text-cream text-[22px] font-normal leading-snug">
+                Clubtrotteur Paris, a Tribute Portfolio Hotel
+              </p>
+              <p className="font-dm text-[13px] text-cream/40 mt-1">Marriott · Tribute Portfolio · Gare du Nord</p>
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2">
+              {['Ouverture IT', 'Marriott', 'Réseau & Wi-Fi', 'Cybersécurité', 'Support J0'].map((tag) => (
+                <span
+                  key={tag}
+                  className="font-dm text-[11px] font-medium tracking-[0.1em] uppercase px-3 py-1 border border-gold/20 text-gold/70 rounded-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* KPIs */}
+            <div className="flex flex-col gap-3 pt-2">
+              {[
+                { label: 'Type de mission', value: 'Ouverture IT (hors câblage)' },
+                { label: 'Chambres', value: '48 chambres' },
+                { label: 'Livraison', value: 'Opérationnel dès J0' },
+                { label: 'Standard', value: 'Marriott Tech Standards' },
+              ].map((kpi) => (
+                <div key={kpi.label} className="flex items-start justify-between border-b border-white/5 pb-3 gap-4">
+                  <span className="font-dm text-[12px] text-cream/40 flex-shrink-0">{kpi.label}</span>
+                  <span className="font-dm text-[12px] font-medium text-cream/80 text-right">{kpi.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right — storytelling */}
+          <div className="flex flex-col gap-8">
+            <p
+              className="font-cormorant font-normal text-cream/90 leading-snug"
+              style={{ fontSize: 'clamp(22px, 2.5vw, 32px)' }}
+            >
+              Un camp de base pour voyageurs à Gare du Nord. Une ouverture IT clé en main.
+            </p>
+
+            <div className="h-px bg-gold/15" />
+
+            <div className="flex flex-col gap-4">
+              <p className="font-dm text-[15px] font-light text-cream/60 leading-[1.8]">
+                Nouvel hôtel lifestyle de 48 chambres de la collection Tribute Portfolio (Marriott), Clubtrotteur Paris a confié à DSI Hotel l&apos;ensemble de son projet informatique d&apos;ouverture.
+              </p>
+              <p className="font-dm text-[15px] font-light text-cream/60 leading-[1.8]">
+                Hors câblage, DSI Hotel a tout pris en charge : réseau et VLAN, Wi-Fi clients et collaborateurs, intégration des systèmes Marriott, sécurité, parc utilisateurs et accompagnement des équipes jusqu&apos;au jour de l&apos;ouverture.
+              </p>
+            </div>
+
+            <div
+              className="flex items-start gap-4 p-5 rounded-sm"
+              style={{ backgroundColor: 'rgba(190,155,90,0.06)', border: '1px solid rgba(190,155,90,0.15)' }}
+            >
+              <span className="text-gold mt-0.5">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+              <p className="font-dm text-[13px] font-light text-cream/70 leading-[1.7]">
+                Résultat : ouverture réussie, infrastructure conforme aux standards Marriott et équipes opérationnelles dès le premier jour.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Bottom note */}
         <motion.div
           initial={{ opacity: 0 }}
