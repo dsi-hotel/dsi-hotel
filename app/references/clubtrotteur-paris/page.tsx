@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Ouverture IT Clubtrotteur Paris, a Tribute Portfolio Hotel | DSI Hotel',
   description:
-    "DSI Hotel a piloté l'ouverture informatique du Clubtrotteur Paris, a Tribute Portfolio Hotel (Marriott) à Gare du Nord : réseau, Wi-Fi, systèmes Marriott, sécurité et support J0.",
+    "DSI Hotel a piloté l'ouverture informatique du Clubtrotteur Paris, a Tribute Portfolio Hotel (Marriott) à Gare du Nord : réseau, Wi-Fi, systèmes Marriott, sécurité et support à l'ouverture.",
   alternates: {
     canonical: 'https://www.dsihotel.com/references/clubtrotteur-paris',
   },
@@ -30,7 +30,6 @@ const faits = [
   { label: 'Lieu', value: 'Quartier Gare du Nord, Paris 10e' },
   { label: 'Capacité', value: '48 chambres, coffee shop & bar, salle de fitness' },
   { label: 'Mission', value: "Ouverture IT — ensemble du projet informatique" },
-  { label: 'Livraison', value: 'Équipes opérationnelles dès le jour d\u2019ouverture' },
   { label: 'Standard', value: 'Standards technologiques Marriott' },
 ]
 

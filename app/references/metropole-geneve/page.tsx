@@ -30,7 +30,6 @@ const faits = [
   { label: 'Lieu', value: 'Rive gauche du lac Léman, Genève, Suisse' },
   { label: 'Capacité', value: '111 chambres et 16 suites' },
   { label: 'Mission', value: 'Ouverture IT complète' },
-  { label: 'Livraison', value: 'Ouverture J0 sans interruption de service' },
   { label: 'Conformité', value: 'RGPD Suisse, PCI-DSS' },
 ]
 

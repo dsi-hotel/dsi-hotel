@@ -172,7 +172,7 @@ export const es: typeof fr = {
   },
 
   projects: {
-    label: 'Proyectos en curso',
+    label: 'Proyectos realizados',
     h2a: 'Referencias',
     h2b: 'europeas',
     desc: 'Proyectos de gran envergadura que demuestran nuestra experiencia sobre el terreno, en Francia y Suiza.',
@@ -185,7 +185,6 @@ export const es: typeof fr = {
       kpis: [
         { label: 'Tipo de misión', value: 'Apertura IT completa' },
         { label: 'Habitaciones y suites', value: '111 habitaciones · 16 suites' },
-        { label: 'Entrega', value: 'Apertura día 0 sin interrupciones' },
         { label: 'Conformidad', value: 'RGPD CH · PCI-DSS' },
       ],
       pullQuote: 'Un monumento de 170 años. Una apertura IT sin contratiempos.',
@@ -196,11 +195,10 @@ export const es: typeof fr = {
       country: "París, Francia",
       hotel: 'Clubtrotteur Paris, a Tribute Portfolio Hotel',
       subtitle: "Marriott · Tribute Portfolio · Gare du Nord",
-      tags: ["Apertura IT", "Marriott", "Red y Wi-Fi", "Ciberseguridad", "Soporte día 1"],
+      tags: ["Apertura IT", "Marriott", "Red y Wi-Fi", "Ciberseguridad", "Soporte apertura"],
       kpis: [
         { label: "Tipo de misión", value: "Apertura IT" },
         { label: "Habitaciones", value: "48 habitaciones" },
-        { label: "Entrega", value: "Operativo desde el día 1" },
         { label: "Estándar", value: "Marriott Tech Standards" },
       ],
       pullQuote: "Un campamento base para viajeros en Gare du Nord. Una apertura IT llave en mano.",

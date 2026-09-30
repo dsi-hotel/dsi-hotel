@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Transition IT InterContinental Estoril | DSI Hotel',
   description:
-    "Comment DSI Hotel accompagne la transition en franchise IHG de l'InterContinental Estoril : PMS, réseau, connectivité, IHG Tech Standards.",
+    "Comment DSI Hotel a accompagné la transition en franchise IHG de l'InterContinental Estoril : PMS, réseau, connectivité, IHG Tech Standards.",
   alternates: {
     canonical: 'https://www.dsihotel.com/references/intercontinental-estoril',
   },
@@ -29,7 +29,7 @@ const faits = [
   { label: 'Client', value: 'InterContinental Estoril — IHG, 5 étoiles, Côte d’Estoril' },
   { label: 'Lieu', value: 'Cascais, Portugal' },
   { label: 'Mission', value: 'Transition franchise IHG' },
-  { label: 'Échéance', value: '1er juillet 2026' },
+  { label: 'Bascule IHG', value: '1er juillet 2026' },
   { label: 'Périmètre', value: 'Support IT, PMS, réseau, connectivité' },
   { label: 'Standard', value: 'IHG Tech Standards' },
 ]
@@ -84,8 +84,8 @@ export default function IntercontinentalEstoril() {
             </h2>
             <div className="h-px bg-gold/20 mb-5" />
             <p className="font-dm text-[14px] text-charcoal/70 leading-[1.85]">
-              L&apos;InterContinental Estoril entame une nouvelle ère : son passage en franchise IHG le 1er juillet
-              2026. Un jalon stratégique qui mobilise l&apos;ensemble des équipes techniques de cette adresse
+              L&apos;InterContinental Estoril est entré dans une nouvelle ère : son passage en franchise IHG le 1er juillet
+              2026. Un jalon stratégique qui a mobilisé l&apos;ensemble des équipes techniques de cette adresse
               iconique de la Riviera portugaise.
             </p>
           </div>
@@ -96,9 +96,9 @@ export default function IntercontinentalEstoril() {
             </h2>
             <div className="h-px bg-gold/20 mb-5" />
             <p className="font-dm text-[14px] text-charcoal/70 leading-[1.85]">
-              DSI Hotel intervient en renfort de la structure informatique en place : alignement des systèmes sur les
+              DSI Hotel est intervenu en renfort de la structure informatique en place : alignement des systèmes sur les
               exigences IHG, support à la migration du PMS, sécurisation des réseaux et déploiement des solutions de
-              connectivité. Les équipes sont déjà sur le terrain.
+              connectivité.
             </p>
           </div>
 
@@ -108,8 +108,8 @@ export default function IntercontinentalEstoril() {
             </h2>
             <div className="h-px bg-gold/20 mb-5" />
             <p className="font-dm text-[14px] text-charcoal/70 leading-[1.85]">
-              Déploiement en cours, avec un basculement franchisé prévu le 1er juillet 2026, en appui des équipes IT
-              de l&apos;hôtel.
+              Bascule en franchise IHG réussie le 1er juillet 2026, en appui des équipes IT de l&apos;hôtel, sans
+              interruption de l&apos;exploitation.
             </p>
           </div>
         </div>
