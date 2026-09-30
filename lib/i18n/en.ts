@@ -192,6 +192,24 @@ export const en: typeof fr = {
       body: "When Hôtel Métropole Genève — a Palace founded in 1854 and the only 5-star Superior on the left bank of Lake Geneva — launched its IT renovation project, the requirements matched its history.\n\nDSI Hotel managed the entire infrastructure: from structured cabling to secure VLANs, room-by-room Wi-Fi 7 deployment, PMS integration, IP video surveillance, and PCI-DSS compliance.",
       outcome: "Result: a disruption-free opening, with teams fully operational from day one.",
     },
+    clubtrotteur: {
+      country: "Paris, France",
+      hotel: 'Clubtrotteur Paris, a Tribute Portfolio Hotel',
+      subtitle: "Marriott · Tribute Portfolio · Gare du Nord",
+      tags: ["IT Opening", "Marriott", "Network & Wi-Fi", "Cybersecurity", "Day-1 Support"],
+      kpis: [
+        { label: "Mission type", value: "IT opening (excluding cabling)" },
+        { label: "Rooms", value: "48 rooms" },
+        { label: "Delivery", value: "Operational from day one" },
+        { label: "Standard", value: "Marriott Tech Standards" },
+      ],
+      pullQuote: "A base camp for travellers at Gare du Nord. A turnkey IT opening.",
+      body: [
+        "A new 48-room lifestyle hotel in Marriott's Tribute Portfolio collection, Clubtrotteur Paris entrusted DSI Hotel with its entire pre-opening IT project.",
+        "Apart from cabling, DSI Hotel handled everything: network and VLANs, guest and staff Wi-Fi, Marriott systems integration, security, end-user equipment, and team support right through opening day.",
+      ],
+      outcome: "Outcome: a successful opening, infrastructure compliant with Marriott standards, and teams fully operational from day one.",
+    },
   },
 
   clients: {

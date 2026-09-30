@@ -10,6 +10,7 @@ export default function ProjectsSection() {
   const inView = useInView(ref, { once: true, margin: '-10%' })
   const { t } = useLanguage()
   const p = t.projects
+  const c = p.clubtrotteur
 
   return (
     <section
@@ -273,20 +274,20 @@ export default function ProjectsSection() {
             <div className="flex items-center gap-3">
               <span className="text-2xl">🇫🇷</span>
               <span className="font-dm text-[12px] font-medium tracking-[0.15em] uppercase text-gold/80">
-                Paris, France
+                {c.country}
               </span>
             </div>
 
             <div>
               <p className="font-cormorant text-cream text-[22px] font-normal leading-snug">
-                Clubtrotteur Paris, a Tribute Portfolio Hotel
+                {c.hotel}
               </p>
-              <p className="font-dm text-[13px] text-cream/40 mt-1">Marriott · Tribute Portfolio · Gare du Nord</p>
+              <p className="font-dm text-[13px] text-cream/40 mt-1">{c.subtitle}</p>
             </div>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
-              {['Ouverture IT', 'Marriott', 'Réseau & Wi-Fi', 'Cybersécurité', 'Support J0'].map((tag) => (
+              {c.tags.map((tag: string) => (
                 <span
                   key={tag}
                   className="font-dm text-[11px] font-medium tracking-[0.1em] uppercase px-3 py-1 border border-gold/20 text-gold/70 rounded-sm"
@@ -298,12 +299,7 @@ export default function ProjectsSection() {
 
             {/* KPIs */}
             <div className="flex flex-col gap-3 pt-2">
-              {[
-                { label: 'Type de mission', value: 'Ouverture IT (hors câblage)' },
-                { label: 'Chambres', value: '48 chambres' },
-                { label: 'Livraison', value: 'Opérationnel dès J0' },
-                { label: 'Standard', value: 'Marriott Tech Standards' },
-              ].map((kpi) => (
+              {c.kpis.map((kpi: { label: string; value: string }) => (
                 <div key={kpi.label} className="flex items-start justify-between border-b border-white/5 pb-3 gap-4">
                   <span className="font-dm text-[12px] text-cream/40 flex-shrink-0">{kpi.label}</span>
                   <span className="font-dm text-[12px] font-medium text-cream/80 text-right">{kpi.value}</span>
@@ -318,18 +314,17 @@ export default function ProjectsSection() {
               className="font-cormorant font-normal text-cream/90 leading-snug"
               style={{ fontSize: 'clamp(22px, 2.5vw, 32px)' }}
             >
-              Un camp de base pour voyageurs à Gare du Nord. Une ouverture IT clé en main.
+              {c.pullQuote}
             </p>
 
             <div className="h-px bg-gold/15" />
 
             <div className="flex flex-col gap-4">
-              <p className="font-dm text-[15px] font-light text-cream/60 leading-[1.8]">
-                Nouvel hôtel lifestyle de 48 chambres de la collection Tribute Portfolio (Marriott), Clubtrotteur Paris a confié à DSI Hotel l&apos;ensemble de son projet informatique d&apos;ouverture.
-              </p>
-              <p className="font-dm text-[15px] font-light text-cream/60 leading-[1.8]">
-                Hors câblage, DSI Hotel a tout pris en charge : réseau et VLAN, Wi-Fi clients et collaborateurs, intégration des systèmes Marriott, sécurité, parc utilisateurs et accompagnement des équipes jusqu&apos;au jour de l&apos;ouverture.
-              </p>
+              {c.body.map((para: string) => (
+                <p key={para} className="font-dm text-[15px] font-light text-cream/60 leading-[1.8]">
+                  {para}
+                </p>
+              ))}
             </div>
 
             <div
@@ -342,7 +337,7 @@ export default function ProjectsSection() {
                 </svg>
               </span>
               <p className="font-dm text-[13px] font-light text-cream/70 leading-[1.7]">
-                Résultat : ouverture réussie, infrastructure conforme aux standards Marriott et équipes opérationnelles dès le premier jour.
+                {c.outcome}
               </p>
             </div>
           </div>
