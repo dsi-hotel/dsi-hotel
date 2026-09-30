@@ -166,27 +166,6 @@ export default function ProjectsSection() {
               <p className="font-dm text-[13px] text-cream/40 mt-1">IHG · 5 étoiles · Côte d&apos;Estoril</p>
             </div>
 
-            {/* Badge en cours */}
-            <div
-              className="flex items-center gap-2 self-start"
-              style={{
-                background: 'rgba(201,169,110,0.1)',
-                border: '1px solid rgba(201,169,110,0.3)',
-                borderRadius: 4,
-                padding: '5px 12px',
-              }}
-            >
-              <span
-                style={{
-                  width: 6, height: 6, borderRadius: '50%',
-                  background: '#C9A96E', display: 'inline-block', flexShrink: 0,
-                }}
-              />
-              <span className="font-dm text-[10px] font-medium text-gold uppercase tracking-widest">
-                En cours
-              </span>
-            </div>
-
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
               {['Transition IHG', 'PMS', 'Réseau', 'Connectivité'].map((tag) => (
@@ -203,7 +182,7 @@ export default function ProjectsSection() {
             <div className="flex flex-col gap-3 pt-2">
               {[
                 { label: 'Type de mission', value: 'Transition franchise IHG' },
-                { label: 'Échéance', value: '1er juillet 2026' },
+                { label: 'Bascule IHG', value: '1er juillet 2026' },
                 { label: 'Périmètre', value: 'Support IT, PMS, réseau, connectivité' },
                 { label: 'Standard', value: 'IHG Tech Standards' },
               ].map((kpi) => (
@@ -228,10 +207,10 @@ export default function ProjectsSection() {
 
             <div className="flex flex-col gap-4">
               <p className="font-dm text-[15px] font-light text-cream/60 leading-[1.8]">
-                L&apos;InterContinental Estoril entame une nouvelle ère : son passage en franchise IHG le 1er juillet 2026. Un jalon stratégique qui mobilise l&apos;ensemble des équipes techniques de l&apos;établissement.
+                L&apos;InterContinental Estoril est entré dans une nouvelle ère : son passage en franchise IHG le 1er juillet 2026. Un jalon stratégique qui a mobilisé l&apos;ensemble des équipes techniques de l&apos;établissement.
               </p>
               <p className="font-dm text-[15px] font-light text-cream/60 leading-[1.8]">
-                DSI Hotel intervient en renfort de la structure informatique en place : alignement des systèmes sur les exigences IHG, support à la migration du PMS, sécurisation des réseaux et déploiement des solutions de connectivité. Les équipes sont déjà sur le terrain.
+                DSI Hotel est intervenu en renfort de la structure informatique en place : alignement des systèmes sur les exigences IHG, support à la migration du PMS, sécurisation des réseaux et déploiement des solutions de connectivité.
               </p>
             </div>
 
@@ -246,7 +225,7 @@ export default function ProjectsSection() {
                 </svg>
               </span>
               <p className="font-dm text-[13px] font-light text-cream/70 leading-[1.7]">
-                Déploiement en cours · Basculement franchisé prévu le 1er juillet 2026 — en appui des équipes IT de l&apos;hôtel.
+                Résultat : bascule en franchise IHG réussie le 1er juillet 2026, en appui des équipes IT de l&apos;hôtel.
               </p>
             </div>
           </div>
